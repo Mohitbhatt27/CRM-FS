@@ -3,13 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 const app: Application = express();
 
-app.use(
-  cors({
-    origin: "https://crm-fs.onrender.com",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.static("dist"));
 
 app.use(bodyParser.json());
